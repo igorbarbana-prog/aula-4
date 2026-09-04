@@ -1,1 +1,116 @@
+/* Definições Gerais */
+* {
+    box-sizing: border-box;
+}
 
+body {
+    max-width: 100vw;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4; /* Fundo cinza claro para contraste */
+}
+
+/* Header - Usando o Azul como principal */
+header {
+    background-color: #183C63; /* Azul Escuro (Cor Principal) */
+    color: #FFFFFF; /* Texto Branco para leitura */
+    text-align: center;
+    padding: 24px 16px;
+    border-bottom: 4px solid #E31C25; /* Detalhe em Vermelho (Cor Secundária) */
+}
+
+header h1 {
+    margin: 0 0 8px 0;
+    font-size: 2.5em;
+}
+
+header p {
+    margin: 0;
+    opacity: 0.9;
+}
+
+/* Container Principal - Grid de Posts */
+main {
+    background-color: #FFFFFF;
+    color: #183C63; /* Texto em Azul Escuro */
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Artigo (Post) - Estilização */
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 2px solid #183C63; /* Borda Azul */
+    margin: 10px;
+    padding: 20px;
+    border-radius: 8px; /* Cantos arredondados */
+    background-color: #fff;
+    transition: transform 0.2s; /* Efeito hover suave */
+    
+    /* Largura flexível: tenta ocupar 30% mas ajusta */
+    flex: 1 1 calc(33% - 20px);
+    min-width: 280px; /* Não deixa ficar muito estreito */
+}
+
+/* Efeito ao passar o mouse no post */
+article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Imagens - Mantendo 80x80px conforme pedido */
+img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; /* Imagens circulares dão toque moderno */
+    border: 3px solid #E31C25; /* Borda Vermelha nas imagens */
+    background-color: #eee; /* Fundo para quando não houver imagem */
+    margin-bottom: 15px;
+}
+
+/* Detalhes do Post */
+h2 {
+    font-size: 1.2em;
+    margin: 0 0 10px 0;
+    color: #183C63;
+}
+
+.artigo-autor {
+    font-weight: bold;
+    color: #E31C25; /* Autor em Vermelho */
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+article p {
+    font-size: 0.95em;
+    line-height: 1.4;
+    color: #444;
+    margin-bottom: 15px;
+    flex-grow: 1; /* Ajuda a alinhar botões no fundo */
+}
+
+/* Botões - Adaptando para as cores */
+button {
+    background-color: #FFFFFF;
+    border: 2px solid #183C63; /* Borda Azul */
+    color: #183C63;
+    padding: 8px 12px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: all 0.2s;
+    font-size: 0.9em;
+}
+
+button:hover {
+    background-color: #E31C25; /* Fundo Vermelho no Hover */
+    color: #FFFFFF; /* Texto Branco no Hover */
+    border-color: #E31C25;
+}
